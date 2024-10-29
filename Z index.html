@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="utf-8">
+    <title>Z-index</title>
+    <style>
+    div{
+        position:relative ;
+        width: 100px;
+        padding: 20px;
+        background-color: #9999;
+        color: white;
+        border: 5px solid blue;
+    }
+        .first{ 
+          z-index: 1;  
+        }
+        .second{
+            z-index: 2;
+            top: -25;
+            left: 75;
+        }
+        .third{
+            z-index: 3;
+            top: -50;
+        }
+        .fourth{
+            z-index: 4;
+            top: -50;
+            left: 75;
+        }
+    </style>
+   </head>
+   <body>
+    <div class="first"><p>div 1</p></div>
+    <div class="second"><p>div 2</p></div>
+    <div class="third"><p>div 3</p></div>
+    <div class="fourth"><p>div 4</p></div>
+   </body> 
+</html>
