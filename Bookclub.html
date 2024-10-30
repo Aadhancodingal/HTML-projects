@@ -24,7 +24,7 @@
   z-index: 2;
   /*fifth lesson*/
    display: flex;
-  }
+   justify-content: center;}
   #intro{/*first lesson*/
   background-color: lightpink;
     /*second lesson*/
@@ -41,7 +41,15 @@
    text-align: center;
    margin-bottom: 50px;}
   .teacher_info{/*first lesson*/
-  background-color: darkcyan;}
+  background-color: darkcyan;
+  border-radius: 5px;
+  width: 400px;
+  margin: 10px;
+  box-shadow: 6px 0px 21px -3px #333333;
+  /*fifth lesson*/
+   display: flex;
+  align-items: center;
+justify-content:bottom ;}
   #book_review{/*first lesson*/
   background-color: darkgreen;
   padding: 5px;
@@ -61,7 +69,12 @@
   #Bestseller_books{/*first lesson*/
   background-color: khaki;}
   footer{/*first lesson*/
-  background-color: blanchedalmond;}
+  background-color: blanchedalmond;
+ display: flex;
+ justify-content:center ;}
+ .teacher_info div:last-child{
+  margin-left: 4px;
+ }
   
     </style>
   </head>
@@ -84,17 +97,27 @@
    </div>
    <!--Main section-->
    <div id="Main_section">
-    <div class="teacher_info">
     <h3>Meet our teachers</h3>
-    
-  <img src="download (1).jpg" alt="Emma">
+   <div id="teachers">
+    <div class="teacher_info">
+      <div>
+          <img src="download(1).jpg" alt="Emma">
+       </div>
   <h4>Ms. Emma</h4>
-  <p>She has a bachelors degree in English vocabulary</p>  
-<img src="teacher 2.jpg" alt="Caroline">
+<div>
+  <p>She has a bachelors degree in English vocabulary</p>
+</div>
+    </div>
+    <div class="teacher_info">
+      <div>  
+<img src="teacher2.jpg" alt="Caroline">
+      </div>
   <h4>Ms Caroline</h4>
+<div>
   <p> She can help to clear queries with her knowlegde of stories</p>
   </div>
     </div>
+   </div>
     <div id="book_review">
 <h2>Book review</h2>
 <h3>Alice in wonderland</h3>
