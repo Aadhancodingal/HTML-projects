@@ -77,7 +77,7 @@ justify-content:bottom ;}
  }
  /*sixth lesson*/
   header{
-  grid-area:header;
+  grid-area: header;
   }
   nav{
     grid-area: nav;
@@ -91,13 +91,16 @@ justify-content:bottom ;}
   #Bestseller_books{
     grid-area: bestsellers;
   }
+  footer{
+    grid-area: footer;
+  }
   .gridcontainer{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-template-areas:
     "header header header header intro" 
     "nav nav nav nav intro"
-    "Main_section Main_section Main_section Main_section Bestseller_books"
+    "main-section main-section main-section main-section bestsellers"
     "footer footer footer footer footer";
   }
     </style>  
