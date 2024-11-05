@@ -73,10 +73,34 @@ justify-content:bottom ;}
  display: flex;
  justify-content:center ;}
  .teacher_info div:last-child{
-  margin-left: 4px;
+  margin-left: 50px;
  }
-  
-    </style>
+ /*sixth lesson*/
+  header{
+  grid-area:header;
+  }
+  nav{
+    grid-area: nav;
+  }
+  #intro{
+    grid-area: intro;
+  }
+  #Main_section{
+    grid-area: main-section;
+  }
+  #Bestseller_books{
+    grid-area: bestsellers;
+  }
+  .gridcontainer{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-areas:
+    "header header header header intro" 
+    "nav nav nav nav intro"
+    "Main_section Main_section Main_section Main_section Bestseller_books"
+    "footer footer footer footer footer";
+  }
+    </style>  
   </head>
   <header>
   <h1>Mount camel Book club</h1>
@@ -161,6 +185,7 @@ justify-content:bottom ;}
     <td>Closed</td> 
    </tr>
 </table>
+   </div>
    </div>
 <!--Bestseller Books-->
   <div id="Bestseller_books">
