@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A spooky story</title>
+    </head>
+    <body>
+        <h1>A Spooky story</h1>
+       <p id="story">I need to seacrh my friend! He might be in the basement</p>
+       <button onclick="godark()">Get in the mood</button>
+       <p id="typeTEXT">Type your name if you dare</p><input type="text" id="name">
+        <button onclick="typeandScream()">Please,Please do not click me</button>
+        <button onclick="finish()">Tell What Happened</button>
+        <script>
+            function godark() {
+              document.body.className="Dark";  
+            }
+            function typeandScream(){
+             var personName = document.getElementById=("name") ,value;
+             alert("I told you not to do that. DO a bicycle kick now " + personName)
+            }
+            function finish() {
+                document.body.className="Light"; 
+                alert("I did a bicycle kick")   
+            }
+        </script>
+    </body>
+</html>
