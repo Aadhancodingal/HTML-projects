@@ -43,20 +43,29 @@
    <nav>
     <ul>
        <li><a href="Home.html"> Home </a></li>
-      <li><a href="Home.html"> About </a></li>
-       <li><a href="Home.html"> Contact us </a></li>
+      <li><a href="About.html"> About </a></li>
+       <li><a href="Contact us.html"> Contact us </a></li>
     </ul>
    </nav>
+   <div id="Tiger-info">
    <img src="Tiger.jpg" alt="Tiger">
-   <p>The tiger (Panthera tigris) is a large cat and a member
-   of the genus Panthera native to Asia. It has a powerful,
-   muscular body with a large head and paws, a long tail and orange fur with black,
-   mostly vertical stripes. It is traditionally classified into nine recent subspecies,
-   though some recognise only two subspecies, mainland Asian tigers and the island tigers of the Sunda Islands.</p>
-   <img src="Lion.jpg" alt="Lion">
-   <p>The lion (Panthera leo) is a large cat of the genus Panthera, native to Africa and India.
-   It has a muscular, broad-chested body; a short, rounded head; round ears; and a dark, hairy tuft at
-   the tip of its tail. It is sexually dimorphic; adult male lions are larger than females and have a prominent
-   mane</p> 
+   <br>
+   <button onclick="tiger()">Read More!</button>
+   </div>
+   <div class="Lion-info">
+      <img src="Lion.jpg" alt="Lion">
+   <br>
+   <button onclick="lion()">Read More!</button>
+   </div>
+   <script>
+    function tiger() {
+     document.getElementById("Tiger-info").innerHTML=
+"The tiger (Panthera tigris) is a large cat and a member of the genus Panthera native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes. It is traditionally classified into nine recent subspecies, though some recognise only two subspecies, mainland Asian tigers and the island tigers of the Sunda Islands."
+    }
+    function lion() {
+     document.getElementById("Lion-info").innerHTML=
+"The lion (Panthera leo) is a large cat of the genus Panthera, native to Africa and India. It has a muscular, broad-chested body; a short, rounded head; round ears; and a dark, hairy tuft at the tip of its tail. It is sexually dimorphic; adult male lions are larger than females and have a prominent mane"
+    }
+   </script> 
 </body>
 </html>
