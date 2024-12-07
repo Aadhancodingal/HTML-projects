@@ -10,19 +10,22 @@
         <img class="mySlide " src="img2.jpg" style="height: 500px;">
         </section>
         <script>
-            var myIndex = 0
-            carousel();
-           function carousel() {
-            var i;
-            var pic = document.getElementsByClassName("mySlide");
-            for (i = 0;i < x.length; i++) {
-               x[i].style.display = "none"; 
-            }
-           }
-           myIndex++;
-           if (myindex > x.length) (myIndex = 1)
-           x[myIndex - 1].style.display = "block";
-        setTimeout(carousel,3000) 
+            var myIndex = 0;
+
+carousel();
+function carousel() {
+var i;
+var pic = document.getElementsByClassName("mySlide"); // Use the correct variable name here.
+for (i = 0; i < pic.length; i++) {
+pic[i].style.display = "none"; // Ensure you're using `pic` instead of `x`.
+}
+myIndex++;
+if (myIndex > pic.length) {
+myIndex = 1; // Reset index to 1 when it exceeds the number of images.
+}
+pic[myIndex - 1].style.display = "block"; // Show the current image.
+setTimeout(carousel, 3000); // Call the function again after 3 seconds.
+} 
         </script>
     </body>
 </html>
