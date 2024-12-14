@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>Website</title>
+      <link rel="stylesheet" href="style.css" type="text/css">
+      <style>
+        body{
+            text-align: center;
+        }
+        .topnav{
+          overflow: hidden;
+          background-color: black
+        }
+        .topnav a{
+           color: green;
+           padding: 5px;
+        }
+        .topnav a:hover{
+            color: black;
+            background-color: greenyellow;
+            
+        }
+      </style>
+   </head>
+   <body>
+    <div class="topnav">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Gallery</a>
+    </div>
+    <img class="myslides" src="img1.jpg" style="height: 500px;">
+    <img class="myslides"  src="img2.jpg" style="height: 500px;">
+    <img class="myslides"  src="img3.jpg" style="height: 500px;">
+    <script>
+        var myIndex = 0;
+
+carousel();
+function carousel() {
+var i;
+var pic = document.getElementsByClassName("myslides");
+for (i = 0; i < pic.length; i++) {
+pic[i].style.display = "none"; 
+}
+
+myIndex++;
+if (myIndex > pic.length) {
+myIndex = 1; 
+}
+
+pic[myIndex - 1].style.display = "block";
+setTimeout(carousel, 3000);
+}
+ 
+    </script>
+   </body> 
+</html>
