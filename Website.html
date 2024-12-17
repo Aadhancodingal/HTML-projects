@@ -20,6 +20,44 @@
             background-color: greenyellow;
             
         }
+        .pimg1,.pimg2,.pimg3{
+          position: relative;
+          opacity:0.70 ;
+          background-position:center ;
+          background-size:cover ;
+          background-repeat:no-repeat ;
+          background-attachment:fixed ;
+        }
+        .pimg3{
+          background-image:url(img3.jpg);
+          min-height: 400px;
+          
+        }
+        section{
+        text-align: center;
+        padding: 50px 80px ;
+    }
+    .section-dark{
+        background-color: black;
+        color: white;
+    }
+    .footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+    .content{
+      background-color: yellow;
+      color: black;
+      position: fixed;
+      top: 0;
+      right: 0;
+      
+    }
       </style>
    </head>
    <body>
@@ -32,6 +70,15 @@
     <img class="myslides" src="img1.jpg" style="height: 500px;">
     <img class="myslides"  src="img2.jpg" style="height: 500px;">
     <img class="myslides"  src="img3.jpg" style="height: 500px;">
+    <div class="pimg3">
+      Image one text
+    </div>
+    <div class="footer">
+      &copy right and resereved by Aadhan
+    </div>
+    <div class="content">
+      Penguins are a group of aquatic flightless birds from the family Spheniscidae  of the order Sphenisciformes  
+    </div>
     <script>
         var myIndex = 0;
 
