@@ -9,4 +9,4 @@ if(num>1):
 if (flag):
  print("It is not a prime Number")
 else:
- print("It is a prime number")    
+ print("It is a prime number")   
