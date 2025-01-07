@@ -10,4 +10,15 @@ class CssStudent:
   def getAdress(self):
     return self.address
 
-  add = ""
+add = CssStudent(101)
+add.setAddress("Rasipuram,Tamilnadu")
+print(add.getAdress)
+
+a = CssStudent(101)
+b = CssStudent(102)
+
+print(a.stream)
+print(b.stream)
+print(a.roll)
+
+print(CssStudent.stream)
