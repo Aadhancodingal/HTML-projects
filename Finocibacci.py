@@ -8,6 +8,12 @@ def fib_series(nterms):
   n2 = nth
   count += 1
 
-nterms = int(input("Enter a integer"))
-if (nterms == 0): 
- print("Please")
+nterms = int(input("How many Terms"))
+if (nterms <= 0): 
+ print("Please Enter a positive integer")
+elif(nterms==1):
+ print("Finocibacci Sequence upto",nterms)
+ fib_series(nterms)
+else:
+  print("Finocibacci Sequence :")
+  fib_series(nterms)
