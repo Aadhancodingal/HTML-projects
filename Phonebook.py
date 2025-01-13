@@ -1,6 +1,6 @@
 import sys
 def initial_phonebook():
-  rows,columns = int(input("Enter the number of contacts you want"))
+  rows,columns = int(input("Enter the number of contacts you want")),5
   phonebook = []
   print(phonebook)
   for i in range(rows):
@@ -54,3 +54,23 @@ def add_contact(pb):
     dip.append(str(input("Enter e-mail address :")))
    if (i==3):
     dip.append(str(input("Enter date of Birth(dd/mm/yy) :")))
+   if (i==4):
+    dip.append(str(input("Enter category(Family/friends/work/others)")))
+ 
+ pb.append(dip)
+ return
+
+def remove_existing(pb):
+  query = str(input("Please enter the name of the contack you wish to delete :"))
+  temp = 0
+  for i in range(len(pb)):
+    if query==[i][0]: 
+      temp += 1
+      print(pb.pop(i))
+      print("This query has now been removed")
+      return pb
+  if temp == 0:
+   print("Sorry you have entered a invaild query.\nPlease recheck an laterd try again")
+   return pb
+def delete_all(pb):
+  return pb.clear       
