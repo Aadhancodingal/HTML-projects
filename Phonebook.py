@@ -72,5 +72,41 @@ def remove_existing(pb):
   if temp == 0:
    print("Sorry you have entered a invaild query.\nPlease recheck an laterd try again")
    return pb
+
 def delete_all(pb):
-  return pb.clear       
+  return pb.clear
+
+def search_existing(pb):
+  choice = int(input("Enter search criteria\n\n\n 1. Name 2.Number\n 3.E-mail ID\n 4.DOB(dd/mm/yy)\n 5.category(Family/friends/work/others)"))
+  temp = []
+  check = -1
+  if(choice==1):
+    query = str(input("Please enter the name of the contact you wish to search:"))
+    for i in range(len(pb)):
+      if query == pb[i][0]:
+       check = i
+       temp.append(pb[i])
+  elif(choice==2):
+    query = int(input("Please enter the number of the contact you wish to search:"))
+    for i in range(len(pb)):
+      if query == [i][1]:
+        check = i
+        temp.append(pb[i])
+  elif(choice==3):
+    query = int(input("Please enter the email Id of the contact you wish to search:"))
+    for i in range(len(pb)):
+      if query == [i][2]:
+        check = i
+        temp.append(pb[i])
+  elif(choice==4):
+    query = int(input("Please enter the DOB(in DD/MM/YY format only) of the contact you wish to search:"))
+    for i in range(len(pb)):
+      if query == [i][3]:
+        check = i
+        temp.append(pb[i])
+  elif(choice==5):
+    query = int(input("Please enter the category of the contact you wish to search:"))
+    for i in range(len(pb)):
+      if query == [i][4]:
+        check = i
+        temp.append(pb[i])                  
