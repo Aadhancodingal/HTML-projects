@@ -109,4 +109,46 @@ def search_existing(pb):
     for i in range(len(pb)):
       if query == [i][4]:
         check = i
-        temp.append(pb[i])                  
+        temp.append(pb[i]) 
+  else:
+    print("Invalid Search Criteria")
+    return -1
+  if(check ==-1):
+   return -1 
+  else:
+   display_all(temp)
+   return check
+def display_all(pb):
+ if not pb:
+  print("List is Empty: []")
+ else:
+  for i in range(len(pb)):
+    print(pb[i])
+def thanks():
+ print("........................................................................")
+ print("Thank you for using our smartphone directory system")
+ print("Please visit again")
+ print("........................................................................")
+
+print("................................................")
+print("Hello dear user ,welcome to our smartphone directory system.")
+print("You may now proceed to explore this directory")
+print("................................................")
+ch = 1
+pb = initial_phonebook()
+while ch in (1,2,3,4,5):
+  ch = menu()
+  if (ch == 1):
+    pb = add_contact(pb)
+  elif(ch == 2):
+    pb = remove_existing(pb)
+  elif(ch == 3):
+    pb = delete_all(pb)
+  elif(ch == 4):
+    d = search_existing(pb)
+    if d == -1:
+      print("The contact does not exist.Please try again")
+  elif(ch == 5):
+    pb = display_all(pb)
+  else:
+    pb = thanks()      
