@@ -93,4 +93,38 @@ class RpsGame():
     elif pl == pc:
       pass
     else:
-      self.pl_score += 1    
+      self.pl_score += 1
+  def image_reset(self):
+    self.font = pygame.font.Font(('Splatch.ttf'),90)
+    self.text = pygame.font.render(f"",True,(0,0,0))
+    self.screen.blit(self.bg,(0,0))
+    self.screen.blit(self.r_btn,(20,500))
+    self.screen.blit(self.p_btn,(330,500))
+    self.screen.blit(self.s_btn,(640,500))
+    pass
+  def game_loop(self):
+    run = True
+    clock = pygame.time.Clock()
+    rps_game = RpsGame()
+
+    while run:
+      pygame.display.update()
+      self.screen.blit(self.text,(330,0))
+
+      for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+          run = False
+        if event == pygame.MOUSEBUTTONDOWN:
+          if self.rock_btn(30) or self.paper_btn(340) or self.scissors_btn(640):
+            rps_game.image_reset()
+            rps_game.player()
+            rps_game.computer()
+
+            self.pl_score_cache += rps_game.pl_score_cache()
+            self.pc_score_cache += rps_game.pc_score_cache()
+            self.text = self.font.render(f"{self.pl_score}:{self.pc_score}",True,(255,255,255))
+          pygame.display.flip()
+          clock.tick(30)
+    if __name__ == '__main__':
+     game = RpsGame()
+     game.game_loop()
